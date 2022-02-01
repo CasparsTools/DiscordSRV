@@ -18,7 +18,7 @@ Require linked account to play:
   # Whether or not players on the VANILLA whitelist will bypass the need to link their accounts/have a sub role
   Whitelisted players bypass check: true
   # Whether or not to let players in the VANILLA banlist be able to link their accounts
-  Check banned players: false
+  Check banned players: true
   # Whether or not players not in the VANILLA banlist will bypass the need to link their accounts/have a sub role
   Only check banned players: false
 
