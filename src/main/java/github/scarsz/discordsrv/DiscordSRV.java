@@ -717,7 +717,7 @@ public class DiscordSRV extends JavaPlugin {
             ));
 
             dns = new Dns() {
-                // maybe drop minidns in favor of something else
+                // maybe drop minidns in favour of something else
                 // https://github.com/dnsjava/dnsjava/blob/master/src/main/java/org/xbill/DNS/SimpleResolver.java
                 // https://satreth.blogspot.com/2015/01/java-dns-query.html
 
@@ -727,7 +727,7 @@ public class DiscordSRV extends JavaPlugin {
                 public List<InetAddress> lookup(@NotNull String host) throws UnknownHostException {
                     int max = config.getInt("MaximumAttemptsForSystemDNSBeforeUsingFallbackDNS");
                     //  0 = everything falls back (would only be useful when the system dns literally doesn't work & can't be fixed)
-                    // <0 = nothing falls back, everything uses system dns
+                    // <0 = nothing falls back, everything uses system DNS
                     // >0 = falls back if goes past that amount of failed requests in a row
                     if (max < 0 || (max > 0 && failedRequests < max)) {
                         try {
@@ -781,7 +781,7 @@ public class DiscordSRV extends JavaPlugin {
                             DiscordSRV.error("DNS server " + dnsServer.getHostAddress() + " failed to resolve " + host, e);
                         }
 
-                        // this dns server gave us an error so we move this dns server to the end of the
+                        // this dns server gave us an error so we move this DNS server to the end of the
                         // list, effectively making it the last resort for future requests
                         fallbackDnsServers.remove(dnsServer);
                         fallbackDnsServers.add(dnsServer);
